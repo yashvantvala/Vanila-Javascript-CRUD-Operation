@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: arial,sans-serif,helvetica;
+			/*background-image: linear-gradient(120deg,#f6d365,#fda085);*/
+
+		}
+
+		header h2{
+			background-color: coral;
+			text-align: center;
+			margin: auto;
+			color: #fff;
+			height: 2rem;
+
+		}
+		#person{
+			width: 50%;
+			margin: auto;
+			text-align: center;
+			padding: 40px;
+			float: right;
+			border-collapse:collapse;
+			font-family: arial,helvetica,sans-serif;
+			
+		}
+		th,td{
+			text-align: left;
+			padding: 8px;
+		}
+		tr:nth-child(even){
+			background-color: #f4f4f4
+		}
+		th{
+			background-color: green;
+			opacity: 0.7;
+			color: #fff;
+
+		}
+		tr{
+			padding: 12px;
+		}
+		th:hover{
+			
+			font-size: 1.2rem;
+			transition: 0.2s;
+		}
+		.container{
+			width:80%;
+			margin: auto;
+			padding: 40px;
+		}
+		label{
+			display: block;
+			padding: 0.2em;
+		}
+		.frm{
+			
+			justify-content: center;
+			align-items: center;
+			float: left;
+		}
+		input[type="text"]{
+			width:300px;
+			border: 2px solid #3498db;
+			outline: none;
+			padding:0.4em;
+			display: block;
+			border-radius: 24px;
+			transition: 0.2s;
+			margin: 8px;
+			box-sizing: border-box;
+
+			
+		}
+		input[type="submit"]{
+			border-color: green;
+			
+			padding: 12px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 5rem;
+			border-radius: 5px;
+			font-weight: bold;
+		}
+		input[type="submit"]:hover{
+			width: 6rem;
+			transition: 0.4s ease-in-out;
+			background-color: green;
+			color: #fff;
+		}
+		button{
+			
+			padding: 6px 4px;
+			margin: 6px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.delete{
+			
+			border-color: red;
+			
+		}
+		.update{
+			border-color: #1b1b87;
+		}
+		.delete:hover{
+			background-color: red;
+			transition: 0.4s ease-in-out;
+			border: none;
+			width: 2rem;
+			color: #fff;
+		}
+		
+		.update:hover{
+			background-color: #1b1b87;
+			transition: 0.4s ease-in-out;
+			border: none;
+			width: 2rem;
+			color: #fff;
+		}
+		#upd{
+			border-color: #222298;
+			
+			padding: 12px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 5rem;
+			border-radius: 5px;
+		}
+		#upd:hover{
+			width: 6rem;
+			transition: 0.4s ease-in-out;
+			background-color: #222298;
+			color: #fff;
+		}
+		#search{
+			float: right;
+			margin: 8px 12rem;
+			text-align: center;
+		}
+		@media(max-width: 600px){
+			input[type="text"]{
+				width: 140%;
+				display: block;
+
+			}
+			#person,#search{
+				margin: 5px;
+				float: left;
+				width: 100%;
+
+
+			}
+
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		<h2>Employee Data</h2>
+	</header>
+	<div class="container">
+		<div class="frm">
+		<form id="myForm">
+		<div class="form-group">
+			<label>NAME</label>
+			<input type="text" name="" id="name">
+			<label id="errname"></label>
+		</div>
+		<div class="form-group">
+			<label>EMAIL</label>
+			<input type="text" name="" id="email">
+			<label id="erremail"></label>
+		</div>
+		<div class="form-group">
+			
+			<input type="submit" value="SUBMIT">
+		</div>
+	</form>
+	<button id="upd">UPDATE</button>
+</div>
+<div>
+
+	<input type="text" id="search" name="" placeholder="search employee...">
+</div>
+	<table id="person">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>NAME</th>
+			<th>EMAIL</th>
+			<th>EDIT & DELETE</th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+		
+	</tbody>
+		
+	</table>
+	</div>
+<script type="text/javascript" src="crudop.js"></script>
+</body>
+</html>
